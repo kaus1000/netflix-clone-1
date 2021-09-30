@@ -1,6 +1,5 @@
-<br />
-<br />
-![preview](https://user-images.githubusercontent.com/66697772/135534479-e980e8a5-7188-4a38-a8ce-07ffca334245.png)
+
+![preview](https://user-images.githubusercontent.com/66697772/135534817-deaa8fe7-cfc2-46d3-a91d-29aa3926d3c2.png)
 
 ## :bookmark: Resumo
 
