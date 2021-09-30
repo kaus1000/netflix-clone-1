@@ -3,54 +3,83 @@
     --preta:#141414;
 }
 
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    font-size: 62.5%;
+    font-family: 'netflix sans', sans-serif;
+}
+
+
+@font-face {
+    font-family: "netflix medium";
+    src: url("/fonts/netflix-sans-cufonfonts/NetflixSansMedium.ttf");
+}
+@font-face {
+    font-family: "netflix bold";
+    src: url("/fonts/netflix-sans-cufonfonts/NetflixSansBold.ttf");
+}
+@font-face {
+    font-family: "netflix thin";
+    src: url("/fonts/netflix-sans-cufonfonts/NetflixSansThin.ttf");
+}
+@font-face {
+    font-family: "netflix light";
+    src: url("/fonts/netflix-sans-cufonfonts/NetflixSansLight.ttf");
+}
 /*elementos base*/
 body{
+    font-family: 'netflix sans', sans-serif;
    background: var(--preta);
-   font-family: 'Arial', Times, serif;
    color:white;
 }
 
 
-header .container{
-    display:flex;
-    flex-direction: row;
-    align-items: center;
+.navbar {
+    position:fixed;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    z-index: 10;
+    transition:0.3s;
+    width: 100%;
+}
+nav.scroll {
+    transition:0.3s;
+    padding: 1rem 1.5rem;
+    background: var(--preta);
+    position: fixed;
+    width: 100%;
+  }
+.hamburger {
+    display: none;
+}
+#logo-profile {
+    position:fixed;
+    left: 97%;
+    top: 0;
+    margin-top:1.35rem;
     
 }
 
-header .logo{
-    margin-left: 5px;
-    color: var(--vermelho);
-    font-family: 'Arial Black', Times;
-    font-size:40px;
-}
-
-header nav a{
-    text-decoration:none;
-    color:#AAA;
-    margin-right: 10px;
-}
-
-
-header nav a:hover{
-    color:#fff;
-}
 
 /*filme principal*/
 .filme-principal{
     font-size:16px;
-    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%),  url('/img/capa-house.jpg');
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%),  url('/img/poster.jpg') no-repeat center center fixed;
+    height:700px;
+    background-size: cover;
+    background-repeat: no-repeat;
 
-    height:400px;
-    background-size:cover;
- 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
     display: flex;
     flex-direction: column;
@@ -62,28 +91,33 @@ header nav a:hover{
 .filme-principal .descricao{
     margin-top: 10px;
     margin-bottom: 40px;
+    font-family: 'netflix medium', sans-serif;
+    line-height: 1.6;
+    display: block;
 }
 
 
 .filme-principal .titulo{
-    margin-top: 15%;
+    margin-top: 0%;
     font-size: 40px;
-    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-family: 'netflix bold', sans-serif;
 }
 
 .botao{
-    background-color: rgba(0,0,0,.50);
+    background-color: rgba(94, 91, 91, 0.2);
     border:none;
     color: white;
 
     padding:15px 30px;
     margin-right: 15px;
     font-size: 12px;
-
+    font-family: 'netflix sans', sans-serif;
     cursor: pointer;
     transition: .3s ease all;
 }
-
+span{
+    display: none !important;
+}
 .botao:hover{
     background-color:white;
     color:black;
@@ -103,32 +137,39 @@ header nav a:hover{
 }
 
 .box-filme{
-    height: 100%;
-    width: 100%;
+    height: 350px;
     display: block;
     cursor: pointer;
 }
 
 
 .carrosel-filmes{
-    margin-top:5px;
+    margin-left:50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
+  
+  #section-1 {
+    background: var(--preta);
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  .transition {
+      position:absolute;
+      top: 65rem;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 7vh;
+      z-index: 4;
+  }
+  
+  .transition-1 {
+    background: linear-gradient(#000000, var(--preta) );
+  }
+#titulos{
+    font-size:2.5rem;
+    font-family: "netflix bold";
+    padding:15px 30px;
+    margin-right: 15px;
+}
